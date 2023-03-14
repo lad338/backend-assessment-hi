@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TakehomeApplication {
 
-	public static void main(String[] args) {
-		log.debug("This is a debug message");
-		SpringApplication.run(TakehomeApplication.class, args);
-	}
+  public static void main(String[] args) {
+    log.debug("This is a debug message");
+    SpringApplication.run(TakehomeApplication.class, args);
+  }
 }

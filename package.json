@@ -1,0 +1,14 @@
+{
+  "name": "takehome-assessment",
+  "scripts": {
+    "prettier": "prettier --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
+    "prettier-fix": "prettier --write --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
+    "p": "yarn prettier-fix"
+  },
+  "author": "Angus",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^2.2.1",
+    "prettier-plugin-java": "^1.0.2"
+  }
+}
