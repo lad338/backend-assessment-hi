@@ -3,11 +3,12 @@
   "scripts": {
     "prettier": "prettier --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
     "prettier-fix": "prettier --write --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
-    "p": "yarn prettier-fix"
+    "p": "yarn prettier-fix",
+    "run:redis": "docker compose -f docker-compose-redis-only.yml up"
   },
   "author": "Angus",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "prettier": "^2.2.1",
     "prettier-plugin-java": "^1.0.2"
   }

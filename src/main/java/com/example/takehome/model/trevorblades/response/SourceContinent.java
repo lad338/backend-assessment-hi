@@ -4,7 +4,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class Continent {
+public class SourceContinent {
 
   private String code;
   private String name;

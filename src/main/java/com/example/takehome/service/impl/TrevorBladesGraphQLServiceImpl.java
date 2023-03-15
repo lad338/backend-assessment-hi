@@ -1,7 +1,7 @@
 package com.example.takehome.service.impl;
 
 import com.example.takehome.graphql.Query;
-import com.example.takehome.model.trevorblades.response.Continent;
+import com.example.takehome.model.trevorblades.response.SourceContinent;
 import com.example.takehome.service.TrevorBladesGraphQLService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +19,11 @@ public class TrevorBladesGraphQLServiceImpl implements TrevorBladesGraphQLServic
   }
 
   @Override
-  public List<Continent> getContinents() {
+  public List<SourceContinent> getContinents() {
     return graphQLClient
       .document(Query.CONTINENTS)
       .retrieve("continents")
-      .toEntityList(Continent.class)
+      .toEntityList(SourceContinent.class)
       .block();
   }
 }

@@ -1,3 +1,5 @@
 spring:
   application:
     name: "takehome"
+  main:
+    allow-circular-references: true
