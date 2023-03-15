@@ -9,7 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TakehomeApplication {
 
   public static void main(String[] args) {
-    log.debug("This is a debug message");
     SpringApplication.run(TakehomeApplication.class, args);
+    log.info("This is an info message");
+    log.trace("This is a trace message");
+    log.debug("This is a debug message");
+    log.warn("This is a warn message");
+    log.error("This is an error message");
   }
 }
