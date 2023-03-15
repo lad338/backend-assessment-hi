@@ -33,6 +33,7 @@ dependencies {
 
 	testImplementation "org.springframework.boot:spring-boot-starter-test"
 	testImplementation group: 'org.mockito', name: 'mockito-inline', version: '5.2.0'
+	testImplementation group: 'com.github.codemonstur', name: 'embedded-redis', version: '0.13.0'
 }
 
 tasks.named("test") {

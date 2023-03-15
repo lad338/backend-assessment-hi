@@ -32,7 +32,7 @@ public class RedisTemplateConfig {
 
   @Bean(name = "redisCountryTemplate")
   public RedisTemplate<String, String> redisCountryTemplate() {
-    RedisTemplate<String, String> template = new RedisTemplate<>();
+    final RedisTemplate<String, String> template = new RedisTemplate<>();
     template.setConnectionFactory(redisConnectionFactory);
     template.setKeySerializer(stringRedisSerializer);
     template.setDefaultSerializer(objectRedisSerializer);
@@ -41,7 +41,7 @@ public class RedisTemplateConfig {
 
   @Bean(name = "redisContinentTemplate")
   public RedisTemplate<String, CacheContinent> redisContinentTemplate() {
-    RedisTemplate<String, CacheContinent> template = new RedisTemplate<>();
+    final RedisTemplate<String, CacheContinent> template = new RedisTemplate<>();
     template.setConnectionFactory(redisConnectionFactory);
     template.setKeySerializer(stringRedisSerializer);
     template.setDefaultSerializer(objectRedisSerializer);
