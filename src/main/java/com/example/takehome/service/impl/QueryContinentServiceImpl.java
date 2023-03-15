@@ -25,7 +25,7 @@ public class QueryContinentServiceImpl implements QueryContinentService {
   }
 
   public List<Continent> queryContinents(List<String> queryCountryCodes) {
-    if (queryCountryCodes.isEmpty()) {
+    if (queryCountryCodes == null || queryCountryCodes.isEmpty()) {
       return Collections.emptyList();
     }
 

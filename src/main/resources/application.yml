@@ -1,5 +1,6 @@
 spring:
   application:
     name: "takehome"
-  main:
-    allow-circular-references: true
+redis:
+  host: ${REDIS_HOST:localhost}
+  port: ${REDIS_PORT:6379}

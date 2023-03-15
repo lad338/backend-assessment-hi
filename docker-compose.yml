@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build: .
+    environment:
+      REDIS_HOST: redis
+    depends_on:
+      - redis
+    ports:
+      - 8080:8080
+  redis:
+    image: "redis:7.0.9-alpine"
+    ports:
+      - "${REDISPORT:-6379}:6379"
+    volumes:
+      - ./docker-cache/redis:/data

@@ -4,7 +4,8 @@
     "prettier": "prettier --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
     "prettier-fix": "prettier --write --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
     "p": "yarn prettier-fix",
-    "run:redis": "docker compose -f docker-compose-redis-only.yml up"
+    "start:redis": "docker compose -f docker-compose-redis-only.yml up",
+    "start": "docker compose up"
   },
   "author": "Angus",
   "license": "MIT",
