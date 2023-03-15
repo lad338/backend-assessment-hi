@@ -1,8 +1,5 @@
 package com.example.takehome.service.impl;
 
-import static com.example.takehome.constant.Redis.CONCATENATOR;
-import static com.example.takehome.constant.Redis.COUNTRY_VALUE;
-
 import com.example.takehome.model.api.response.Continent;
 import com.example.takehome.model.cache.CacheContinent;
 import com.example.takehome.service.QueryContinentService;
