@@ -1,7 +1,7 @@
 package com.example.takehome.service;
 
 import static com.example.takehome.constant.Redis.CONCATENATOR;
-import static com.example.takehome.constant.Redis.COUNTRY_VALUE;
+import static com.example.takehome.constant.Redis.COUNTRY;
 
 import com.example.takehome.TestTakehomeApplication;
 import com.example.takehome.config.RedisConfig;
@@ -151,8 +151,8 @@ public class QueryContinentServiceImplIntegrationTest {
     );
 
     assert !setupCacheService.isSetup();
-    assert redisCountryTemplate.opsForValue().get(COUNTRY_VALUE + CONCATENATOR + "US") == null;
-    assert redisCountryTemplate.opsForValue().get(COUNTRY_VALUE + CONCATENATOR + "HK") == null;
+    assert redisCountryTemplate.opsForValue().get(COUNTRY + CONCATENATOR + "US") == null;
+    assert redisCountryTemplate.opsForValue().get(COUNTRY + CONCATENATOR + "HK") == null;
 
     final List<Continent> cacheMiss = queryContinentService.queryContinents(List.of("US", "HK"));
 
@@ -164,8 +164,8 @@ public class QueryContinentServiceImplIntegrationTest {
 
     Mockito.verify(trevorBladesGraphQLService, Mockito.times(1)).getContinents();
 
-    assert "NA".equals(redisCountryTemplate.opsForValue().get(COUNTRY_VALUE + CONCATENATOR + "US"));
-    assert "AS".equals(redisCountryTemplate.opsForValue().get(COUNTRY_VALUE + CONCATENATOR + "HK"));
+    assert "NA".equals(redisCountryTemplate.opsForValue().get(COUNTRY + CONCATENATOR + "US"));
+    assert "AS".equals(redisCountryTemplate.opsForValue().get(COUNTRY + CONCATENATOR + "HK"));
 
     assert setupCacheService.isSetup();
   }

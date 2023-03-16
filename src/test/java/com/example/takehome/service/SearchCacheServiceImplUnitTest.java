@@ -43,9 +43,9 @@ public class SearchCacheServiceImplUnitTest {
 
     Mockito.when(redisCountryTemplate.opsForValue()).thenReturn(mockCountryOps);
     Mockito.when(redisContinentTemplate.opsForValue()).thenReturn(mockContinentOps);
-    Mockito.when(mockCountryOps.get(COUNTRY_VALUE + CONCATENATOR + "US")).thenReturn("NA");
+    Mockito.when(mockCountryOps.get(COUNTRY + CONCATENATOR + "US")).thenReturn("NA");
     Mockito
-      .when(mockContinentOps.get(CONTINENT_VALUE + CONCATENATOR + "NA"))
+      .when(mockContinentOps.get(CONTINENT + CONCATENATOR + "NA"))
       .thenReturn(CacheContinent.builder().name("North America").countries(List.of("US")).build());
   }
 

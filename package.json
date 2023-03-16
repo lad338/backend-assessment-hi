@@ -5,7 +5,12 @@
     "prettier-fix": "prettier --write --plugin=./node_modules/prettier-plugin-java --config .prettierrc.json --check 'src/**/*.java'",
     "p": "yarn prettier-fix",
     "start:redis": "docker compose -f docker-compose-redis-only.yml up",
-    "start": "docker compose up"
+    "redis": "yarn start:redis",
+    "redis:flushall": "docker exec -it backend-assessment-hi-redis-1 redis-cli flushall",
+    "start": "docker compose up",
+    "build": "docker compose build",
+    "test:rate:ip": "sh scripts/call5unauth.sh",
+    "test:rate:auth": "sh scripts/call20auth.sh"
   },
   "author": "Angus",
   "license": "MIT",

@@ -11,13 +11,11 @@ import org.mockito.Mockito;
 
 public class QueryContinentServiceImplUnitTest {
 
-  private SearchCacheService searchCacheService;
-
   private QueryContinentService queryContinentService;
 
   @BeforeEach
   public void mockSearchCacheService() {
-    searchCacheService = Mockito.mock(SearchCacheService.class);
+    final SearchCacheService searchCacheService = Mockito.mock(SearchCacheService.class);
     queryContinentService = new QueryContinentServiceImpl(searchCacheService);
 
     final CacheContinent naContinent = CacheContinent

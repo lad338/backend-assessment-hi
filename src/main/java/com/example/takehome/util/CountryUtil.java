@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class CountryUtil {
+public final class CountryUtil {
 
   /**
    * CountryFilteredLists.countries = codes in filter that exists in fullList (in fullList order), others are ignored

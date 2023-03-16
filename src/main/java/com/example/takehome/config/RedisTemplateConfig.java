@@ -47,4 +47,13 @@ public class RedisTemplateConfig {
     template.setDefaultSerializer(objectRedisSerializer);
     return template;
   }
+
+  @Bean(name = "rateLimitTemplate")
+  public RedisTemplate<String, Integer> rateLimitTemplate() {
+    final RedisTemplate<String, Integer> template = new RedisTemplate<>();
+    template.setConnectionFactory(redisConnectionFactory);
+    template.setKeySerializer(stringRedisSerializer);
+    template.setDefaultSerializer(objectRedisSerializer);
+    return template;
+  }
 }
