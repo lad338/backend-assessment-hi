@@ -20,7 +20,7 @@
 - It is assumed that the source is always available and returning good response. Therefore, there is no extra handling on fail GraphQL calls or data validation checks in the current solution.
 - It is assumed that the user input country codes will be generally good input. Therefore, there is no input validation currently implemented. Non-existing country codes are being ignored in current solution.
 - It is assumed that the output order of countries (`countries` and `otherCountries`) should be based on the GraphQL source provided (such ordering is preserved in cache). In addition, order of user input shall not affect such ordering.
-- It is assumed that the order of `continents` in the output required to be exact.
+- It is assumed that the order of `continents` in the output is not required to be exact.
 
 ## Solution explanation
 - When cache is not setup, GraphQL source will be called upon receiving an API call.
